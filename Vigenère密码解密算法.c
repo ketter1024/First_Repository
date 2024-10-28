@@ -24,19 +24,17 @@ void decrypt(const char *key, const char *cipher, char *clear) {
 }
 
 int main() {
-    char key[101], cipher[101], clear[101];
+    char key[101], cipher[1001], clear[1001];
 
     // 输入密钥和密文
-    printf("请输入密钥：");
-    scanf("%s", key);
-    printf("请输入密文：");
-    scanf("%s", cipher);
+    scanf("%100s", key);
+    scanf("%1000s", cipher);
 
     // 解密
     decrypt(key, cipher, clear);
 
     // 输出明文
-    printf("解密后的明文：%s\n", clear);
+    printf("%s", clear);
 
     return 0;
 }
