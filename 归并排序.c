@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../utils.h"
-
 // 合并
 void merge(int arr[], int tempArr[], int left, int mid, int right)
 {
@@ -67,6 +65,10 @@ void merge_sort(int arr[], int n)
 
 int main(int argc, char const *argv[])
 {
-    test(&merge_sort);
+    int arr[] = {1,1,4,51,4,1,0,9,1,9,810};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    merge_sort(arr, n);
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
     return 0;
 }
